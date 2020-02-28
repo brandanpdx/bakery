@@ -7,10 +7,6 @@ public class Program
   {
     Bread bread = new Bread();
     Pastry pastry = new Pastry();
-
-    // Bread.BreadQuantity = 0;
-    // Pastry.PastryQuantity = 0;
-
     Welcome();
     BreadQuantity();
     PastryQuantity();
@@ -24,6 +20,7 @@ public class Program
     Console.WriteLine("TODAY'S SPECIALS: Buy 2 loaves of bread, get 1 free! Buy 3 pastries for $5!");
     Console.WriteLine("---------------------------------------------------------------------");
   }
+
   public static void BreadQuantity()
   {
     Console.WriteLine("How many loaves of bread do you need today?");
@@ -33,6 +30,7 @@ public class Program
     Console.WriteLine(breadQuantity + " loaves of bread added to cart!");
     Console.WriteLine("---------------------------------------------------------------------");
   }
+
   public static void PastryQuantity()
   {
     Console.WriteLine("How many pastries do you need today?");
@@ -58,6 +56,11 @@ public class Program
     Console.WriteLine("---------------------------------------------------------------------");
   }
 
+  public static void TotalTotals()
+  {
+
+  }
+
   public static void ConfirmCart()
   {
     Console.WriteLine("Are you done shopping? Enter [Y] or [N]");
@@ -70,7 +73,18 @@ public class Program
     }
     else if (userDone == "N" || userDone == "n")
     {
-
+      Console.WriteLine("Would you like to change items in your cart? Enter [Y] or [N]");
+      string userAddMore = Console.ReadLine();
+      if (userAddMore == "Y" || userAddMore == "y")
+      {
+        BreadQuantity();
+        PastryQuantity();
+        ConfirmCart();
+      }
+      else 
+      {
+        ConfirmCart();
+      }
     }
   }
 }
