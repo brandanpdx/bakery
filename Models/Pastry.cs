@@ -9,8 +9,6 @@ namespace Model
     {
       PastryQuantity = qty;
       PastryPrice = 2 * qty;
-
     }
-
   }
 }
