@@ -10,8 +10,6 @@ namespace Model
     {
       BreadQuantity = qty;
       BreadPrice = 5 * qty;
-      BreadTotal = (BreadPrice / 3) * 2 + BreadPrice % 3;
     }
-
   }
 }

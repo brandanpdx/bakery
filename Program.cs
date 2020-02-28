@@ -43,7 +43,7 @@ public class Program
   {
     Console.WriteLine("-------------------------------------------");
     Console.WriteLine("Bread Loaves: " + Bread.BreadQuantity);
-    Console.WriteLine("Subtotal of bread loaves: " + "$" + Bread.BreadTotal);
+    Console.WriteLine("Subtotal of bread loaves: " + "$" + Bread.BreadPrice);
     Console.WriteLine(" - - - - - - - - - - ");
   }
 
