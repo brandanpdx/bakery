@@ -9,7 +9,14 @@ namespace Model
     public static void BreadCalc(int qty)
     {
       BreadQuantity = qty;
-      BreadPrice = 5 * qty;
+
+      if (BreadQuantity % 3 == 0 )
+      {
+        BreadPrice = (BreadQuantity / 3) * 10;
+      }
+      else {
+        BreadPrice = qty * 5;
+      }
     }
   }
 }
