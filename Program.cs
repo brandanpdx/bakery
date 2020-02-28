@@ -41,7 +41,7 @@ public class Program
 
   public static void BreadTotals()
   {
-    Console.WriteLine("----------------------------------------------------------");
+    Console.WriteLine("-------------------------------------------");
     Console.WriteLine("Bread Loaves: " + Bread.BreadQuantity);
     Console.WriteLine("Subtotal of bread loaves: " + "$" + Bread.BreadPrice);
     Console.WriteLine(" - - - - - - - - - - ");
@@ -51,7 +51,7 @@ public class Program
   {
     Console.WriteLine("Pastries: " + Pastry.PastryQuantity);
     Console.WriteLine("Subtotal of pastries: " + "$" + Pastry.PastryPrice);
-    Console.WriteLine("----------------------------------------------------------");
+    Console.WriteLine("-------------------------------------------");
   }
 
   public static void TotalTotals()
@@ -67,10 +67,11 @@ public class Program
     if (userDone == "Y" || userDone == "y")
     {
       Console.Clear();
-      Console.WriteLine("Ok! Here is your cart summary:");
+      Console.WriteLine("Below is your cart summary:");
       BreadTotals();
       PastryTotals();
       TotalTotals();
+      Console.WriteLine("Thanks for your order.  It will be available for pickup soon!");
     }
     else if (userDone == "N" || userDone == "n")
     {
@@ -78,6 +79,7 @@ public class Program
       string userAddMore = Console.ReadLine();
       if (userAddMore == "Y" || userAddMore == "y")
       {
+        Console.Clear();
         BreadQuantity();
         PastryQuantity();
         ConfirmCart();
