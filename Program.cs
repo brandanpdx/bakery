@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using Model; 
 
 public class Program
@@ -54,6 +55,13 @@ public class Program
     Console.WriteLine("-------------------------------------------");
   }
 
+  public static void PleaseWait()
+  {
+    Console.WriteLine("Placing order. Please wait...");
+
+    Thread.Sleep(1500);
+  }
+
   public static void TotalTotals()
   {
     var TotalCart = Bread.BreadPrice + Pastry.PastryPrice;
@@ -66,6 +74,8 @@ public class Program
     string userDone = Console.ReadLine();
     if (userDone == "Y" || userDone == "y")
     {
+      Console.Clear();
+      PleaseWait();
       Console.Clear();
       Console.WriteLine("Below is your cart summary:");
       BreadTotals();
