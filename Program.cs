@@ -44,13 +44,13 @@ public class Program
 
   public static void ConfirmCart()
   {
-    Console.WriteLine("Here is your current cart:");
     Console.WriteLine("Are you done shopping? Enter [Y] or [N]");
     string userDone = Console.ReadLine();
     if (userDone == "Y" || userDone == "y")
     {
-      Console.WriteLine("Ok! Here is your total price:");
-      Console.WriteLine(Bread.BreadPrice);
+      Console.WriteLine("Ok! Here is your cart summary:");
+      Console.WriteLine("Bread Loaves: " + Bread.BreadQuantity);
+      Console.WriteLine("Price of Bread Loaves: " + "$" + Bread.BreadPrice);
 
     }
     else
