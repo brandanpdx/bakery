@@ -11,11 +11,11 @@ namespace Model
       
       if (PastryQuantity % 3 == 0)
       {
-        PastryPrice = (PastryQuantity / 3) * 10;
+        PastryPrice = (PastryQuantity / 3) * 5;
       }
       else
       {
-      PastryPrice = 2 * qty;
+      PastryPrice = qty * 2;
       }
     }
   }
