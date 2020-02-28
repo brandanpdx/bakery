@@ -5,9 +5,16 @@ public class Program
 {
   public static void Main()
   {
+    Bread bread = new Bread();
+    Pastry pastry = new Pastry();
+
+    // Bread.BreadQuantity = 0;
+    // Pastry.PastryQuantity = 0;
+
     Welcome();
     BreadQuantity();
     PastryQuantity();
+    ConfirmCart();
   }
 
   public static void Welcome()
@@ -22,6 +29,7 @@ public class Program
     Console.WriteLine("How many loaves of bread do you need today?");
     string getBread = Console.ReadLine();
     int breadQuantity = int.Parse(getBread);
+    Bread.BreadCalc(breadQuantity);
     Console.WriteLine(breadQuantity + " loaves of bread added to cart!");
     Console.WriteLine("--------------------------------------------------------------------------");
   }
@@ -32,6 +40,28 @@ public class Program
     int pastryQuantity = int.Parse(getPastry);
     Console.WriteLine(pastryQuantity + " pastries added to cart!");
     Console.WriteLine("--------------------------------------------------------------------------");
+  }
+
+  public static void ConfirmCart()
+  {
+    Console.WriteLine("Here is your current cart:");
+    Console.WriteLine("Are you done shopping? Enter [Y] or [N]");
+    string userDone = Console.ReadLine();
+    if (userDone == "Y" || userDone == "y")
+    {
+      Console.WriteLine("Ok! Here is your total price:");
+      Console.WriteLine(Bread.BreadPrice);
+
+    }
+    else
+    {
+
+    }
+  }
+
+  public static void AddBread()
+  {
+    Bread.BreadQuantity++;
   }
   
 }
