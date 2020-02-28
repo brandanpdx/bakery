@@ -90,14 +90,17 @@ public class Program
       if (userAddMore == "Y" || userAddMore == "y")
       {
         Console.Clear();
-        BreadQuantity();
-        PastryQuantity();
-        ConfirmCart();
+        Main();
       }
       else 
       {
         ConfirmCart();
       }
+    }
+    else
+    {
+      Console.WriteLine("Invalid Selection.");
+      ConfirmCart();
     }
   }
 }
