@@ -59,7 +59,7 @@ public class Program
   {
     Console.WriteLine("Placing order. Please wait...");
 
-    Thread.Sleep(1500);
+    Thread.Sleep(900);
   }
 
   public static void TotalTotals()
