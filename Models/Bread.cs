@@ -13,7 +13,7 @@ namespace Model
       BreadQuantity = qty;
       BreadPrice = qty * 5;
 
-      if (BreadQuantity % 3 == 0)
+      if (BreadQuantity >= 3)
       {
       groupedLoaves = (qty / 3);
       individualLoaves = (qty % 3);
