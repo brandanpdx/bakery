@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using Model; 
+using Models; 
 
 public class Program
 {
