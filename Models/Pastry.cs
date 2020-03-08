@@ -4,8 +4,8 @@ namespace Model
   {
     public static int PastryPrice { get; set; }
     public static int PastryQuantity { get; set; }
-    public static int groupedPastry;
-    public static int individualPastry;
+    public static int GroupedPastry { get; set; }
+    public static int IndividualPastry { get; set;}
 
     public static void PastryCalc(int qty)
     {
@@ -14,9 +14,9 @@ namespace Model
 
       if (PastryQuantity >= 3)
       {
-      groupedPastry = (qty / 3);
-      individualPastry = (qty % 3);
-      PastryPrice = (groupedPastry * 5) + (individualPastry * 2); 
+      GroupedPastry = (qty / 3);
+      IndividualPastry = (qty % 3);
+      PastryPrice = (GroupedPastry * 5) + (IndividualPastry * 2); 
       }
     }
   }
