@@ -5,8 +5,8 @@ namespace Model
     public static int BreadPrice { get; set; }
     public static int BreadQuantity { get; set; }
     public static int BreadTotal { get; set; }
-    public static int groupedLoaves { get; set; }
-    public static int individualLoaves { get; set; }
+    public static int GroupedLoaves { get; set; }
+    public static int IndividualLoaves { get; set; }
 
     public static void BreadCalc(int qty)
     {
@@ -15,9 +15,9 @@ namespace Model
 
       if (BreadQuantity >= 3)
       {
-      groupedLoaves = (qty / 3);
-      individualLoaves = (qty % 3);
-      BreadPrice = (groupedLoaves * 10) + (individualLoaves * 5); 
+      GroupedLoaves = (qty / 3);
+      IndividualLoaves = (qty % 3);
+      BreadPrice = (GroupedLoaves * 10) + (IndividualLoaves * 5); 
       }
     }
   }
